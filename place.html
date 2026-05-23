@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR Congo</title>
+    <meta name="description" content="WDD131 - Dynamic Web Fundamentals - Jonathan KOLA MONGENGO, Presentation of Democratic Republic of Congo">
+    <meta name="author" content="Jonathan KOLA MONGENGO">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>DR Congo</h1>
+    </header>
+
+    <div class="hero-container">
+        <picture class="hero-bg">
+            <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+            <source srcset="images/hero-large.webp" media="(min-width: 601px)">
+            <img src="images/hero-large.webp" alt="Landscape of DR Congo">
+        </picture>
+
+        <div class="overlay">
+            <main>
+                <div class="data-card">
+                    <h2>Data</h2>
+                    <p>📍 Area: 2,345,000 sq km</p>
+                    <p>👥 Population: 120,000,000</p>
+                    <p>🏛️ Capital: Kinshasa</p>
+                    <p>🗣️ Languages: French, Lingala, Swahili, Kikongo, Tshiluba</p>
+                    <p>💰 Currency: Congolese Franc</p>
+                    <p>⏰ Time Zone: UTC+1 / UTC+2</p>
+                    <p>📞 Calling Code: +243</p>
+                    <p>🌐 Internet TLD: .cd</p>
+                </div>
+
+                <div class="weather-card">
+                    <h2>Weather ⛅</h2>
+                    <div class="weather-details">
+                        <p>🌡️ Temperature: <span id="temperature">26</span> °C</p>
+                        <p>☁️ Condition: Partly Cloudy</p>
+                        <p>💨 Wind Speed: <span id="wind-speed">5</span> km/h</p>
+                        <p>❄️ Wind Chill: <span id="wind-chill">--</span></p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="current-year"></span> Jonathan KOLA MONGENGO - Kinshasa, DR Congo</p>
+        <p>📅 Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
