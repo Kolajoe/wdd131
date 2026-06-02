@@ -87,12 +87,11 @@ const temples = [
 
 const templeContainer = document.getElementById('temple-container');
 const templeCount = document.getElementById('temple-count');
-const homeBtn = document.getElementById('home-btn');
-const oldBtn = document.getElementById('old-btn');
-const newBtn = document.getElementById('new-btn');
-const largeBtn = document.getElementById('large-btn');
-const smallBtn = document.getElementById('small-btn');
-
+const homeLink = document.getElementById('home-link');
+const oldLink = document.getElementById('old-link');
+const newLink = document.getElementById('new-link');
+const largeLink = document.getElementById('large-link');
+const smallLink = document.getElementById('small-link');
 function getDedicatedYear(dedicatedStr) {
   const parts = dedicatedStr.split(',');
   return parseInt(parts[0].trim());
@@ -134,15 +133,13 @@ function displayTemples(templeArray) {
     const card = document.createElement('div');
     card.classList.add('temple-card');
     
-    const dedicatedDisplay = temple.dedicated;
-    
     const formattedArea = temple.area.toLocaleString();
     
     card.innerHTML = `
       <img src="${temple.imageUrl}" alt="${temple.templeName} temple" loading="lazy">
       <h3>${temple.templeName}</h3>
       <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${dedicatedDisplay}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
       <p><strong>Area:</strong> ${formattedArea} sq ft</p>
     `;
     
@@ -152,45 +149,50 @@ function displayTemples(templeArray) {
   templeCount.textContent = `${templeArray.length} temple${templeArray.length !== 1 ? 's' : ''} found`;
 }
 
-function setActiveButton(activeButtonId) {
-  const buttons = [homeBtn, oldBtn, newBtn, largeBtn, smallBtn];
-  buttons.forEach(btn => {
-    if (btn && btn.id === activeButtonId) {
-      btn.classList.add('active');
-    } else if (btn) {
-      btn.classList.remove('active');
+function setActiveLink(activeLinkId) {
+  const links = [homeLink, oldLink, newLink, largeLink, smallLink];
+  links.forEach(link => {
+    if (link && link.id === activeLinkId) {
+      link.classList.add('active');
+    } else if (link) {
+      link.classList.remove('active');
     }
   });
 }
 
-function handleHomeFilter() {
+function handleHomeFilter(event) {
+  event.preventDefault();
   const filtered = filterTemples('home');
   displayTemples(filtered);
-  setActiveButton('home-btn');
+  setActiveLink('home-link');
 }
 
-function handleOldFilter() {
+function handleOldFilter(event) {
+  event.preventDefault();
   const filtered = filterTemples('old');
   displayTemples(filtered);
-  setActiveButton('old-btn');
+  setActiveLink('old-link');
 }
 
-function handleNewFilter() {
+function handleNewFilter(event) {
+  event.preventDefault();
   const filtered = filterTemples('new');
   displayTemples(filtered);
-  setActiveButton('new-btn');
+  setActiveLink('new-link');
 }
 
-function handleLargeFilter() {
+function handleLargeFilter(event) {
+  event.preventDefault();
   const filtered = filterTemples('large');
   displayTemples(filtered);
-  setActiveButton('large-btn');
+  setActiveLink('large-link');
 }
 
-function handleSmallFilter() {
+function handleSmallFilter(event) {
+  event.preventDefault();
   const filtered = filterTemples('small');
   displayTemples(filtered);
-  setActiveButton('small-btn');
+  setActiveLink('small-link');
 }
 
 function setFooterInfo() {
@@ -206,15 +208,16 @@ function setFooterInfo() {
   }
 }
 
-homeBtn.addEventListener('click', handleHomeFilter);
-oldBtn.addEventListener('click', handleOldFilter);
-newBtn.addEventListener('click', handleNewFilter);
-largeBtn.addEventListener('click', handleLargeFilter);
-smallBtn.addEventListener('click', handleSmallFilter);
+homeLink.addEventListener('click', handleHomeFilter);
+oldLink.addEventListener('click', handleOldFilter);
+newLink.addEventListener('click', handleNewFilter);
+largeLink.addEventListener('click', handleLargeFilter);
+smallLink.addEventListener('click', handleSmallFilter);
 
 function init() {
   setFooterInfo();
   displayTemples(temples);
+  setActiveLink('home-link');
 }
 
 document.addEventListener('DOMContentLoaded', init);

@@ -24,32 +24,31 @@ h1 {
   font-size: 2rem;
 }
 
-.nav-menu {
+nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  list-style: none;
   flex-wrap: wrap;
   padding: 0 1rem;
 }
 
-.nav-menu button {
+nav a {
   background-color: #34495e;
   color: white;
-  border: none;
+  text-decoration: none;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.nav-menu button:hover {
+nav a:hover {
   background-color: #5dade2;
   transform: translateY(-2px);
 }
 
-.nav-menu button.active {
+nav a.active {
   background-color: #e67e22;
   color: white;
 }
@@ -124,12 +123,19 @@ footer {
   margin-top: 2rem;
 }
 
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: #666;
+}
+
 @media (max-width: 768px) {
   .temple-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
   
-  .nav-menu button {
+  nav a {
     padding: 0.4rem 1rem;
     font-size: 0.9rem;
   }
