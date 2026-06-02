@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD131 - Temple picture album with filtering capabilities">
+  <meta name="author" content="Jonathan KOLA MONGENGO">
+  <title>Temple Picture Album | Filtered Gallery</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Picture Album</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><button id="home-btn" class="active">Home</button></li>
+        <li><button id="old-btn">Old (Pre-1900)</button></li>
+        <li><button id="new-btn">New (Post-2000)</button></li>
+        <li><button id="large-btn">Large (>90,000 sq ft)</button></li>
+        <li><button id="small-btn">Small (<10,000 sq ft)</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="temple-count" class="temple-count"></div>
+    <div id="temple-container" class="temple-grid"></div>
+  </main>
+
+  <footer>
+        <p>© <span id="current-year"></span> Jonathan KOLA MONGENGO - Kinshasa, DR Congo</p>
+        <p>📅 Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
