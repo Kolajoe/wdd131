@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Energy DRC | Home</title>
+  <meta name="description" content="Discover DR Congo's renewable energy potential: hydroelectric, solar, and biomass. Learn about the Inga Dam project and sustainable energy solutions.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <span class="logo-icon">🌿⚡</span>
+        <span class="logo-text">Green Energy DRC</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="energy-sources.html">Energy Sources</a></li>
+          <li><a href="benefits.html">Benefits</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Full-width hero image + headline -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Powering Congo's Future with Renewables</h1>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Two-column layout: Welcome message + Quick Fact -->
+      <div class="two-columns">
+        <div class="welcome-message">
+          <h2>Welcome to Green Energy DRC</h2>
+          <p>Overview of DRC energy challenges & opportunities. The Democratic Republic of Congo holds some of Africa's most abundant renewable energy resources. From the mighty Congo River to year-round tropical sunshine, the DRC has the potential to become a green energy leader and power millions of homes across Central Africa.</p>
+        </div>
+        <div class="quick-fact">
+          <h3>Quick Fact</h3>
+          <div class="fact-number">40,000 MW</div>
+          <p>Inga Dam potential — enough to power half of Africa</p>
+        </div>
+      </div>
+
+      <!-- Two-column layout: Energy Savings Calculator + Did you know? -->
+      <div class="two-columns">
+        <div class="calculator-section">
+          <h2>🌞 Energy Savings Calculator</h2>
+          <p>Estimate how much CO₂ you could save by switching to renewable energy.</p>
+          <div class="calculator-form">
+            <label for="kwh-usage">Monthly electricity usage (kWh):</label>
+            <input type="range" id="kwh-slider" min="0" max="2000" value="500" step="10">
+            <input type="number" id="kwh-usage" value="500" step="10">
+            
+            <label for="energy-source">Current energy source:</label>
+            <select id="energy-source">
+              <option value="diesel">Diesel Generator</option>
+              <option value="gasoline">Gasoline Generator</option>
+              <option value="grid">Coal Grid</option>
+            </select>
+            
+            <button id="calculate-btn" class="btn btn-accent">Calculate CO₂ Savings</button>
+            <div id="calculator-result" class="calculator-result"></div>
+          </div>
+        </div>
+        <div class="did-you-know">
+          <h3>💡 Did you know?</h3>
+          <p>Solar in tropical DRC can generate <strong>5-6 kWh/m²/day</strong> — enough to power a home's basic needs with just a few panels!</p>
+        </div>
+      </div>
+
+      <!-- Three-column layout: Hydroelectric | Solar | Biomass -->
+      <div class="three-columns">
+        <div class="energy-type">
+          <div class="energy-icon">💧</div>
+          <h3>Hydroelectric</h3>
+          <p>The Congo River offers unparalleled hydro potential with over 100,000 MW possible.</p>
+        </div>
+        <div class="energy-type">
+          <div class="energy-icon">☀️</div>
+          <h3>Solar</h3>
+          <p>Year-round sunshine with 2,500-3,000 hours annually for reliable power generation.</p>
+        </div>
+        <div class="energy-type">
+          <div class="energy-icon">🌿</div>
+          <h3>Biomass</h3>
+          <p>Sustainable energy from agricultural residues and forest waste.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Green Energy DRC</h4>
+          <p>Promoting sustainable energy solutions for the Democratic Republic of Congo.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="energy-sources.html">Energy Sources</a></li>
+            <li><a href="benefits.html">Benefits</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="social-mockups">
+            <span class="social-icon">📘 Facebook</span>
+            <span class="social-icon">🐦 Twitter</span>
+            <span class="social-icon">📸 Instagram</span>
+          </div>
+          <p>Contact: jnthnkola@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Green Energy DRC | Jonathan KOLA MONGENGO</p>
+        <p>📅 Last Modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
